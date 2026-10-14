@@ -104,7 +104,8 @@ h3{font-size:clamp(1.15rem,1.4vw + .8rem,1.5rem);line-height:1.15}
 .loader__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000,transparent 62%);mask-image:radial-gradient(circle at 50% 50%,#000,transparent 62%);animation:gridDrift 9s linear infinite}
 .loader::before{content:"";position:absolute;width:70vmax;height:70vmax;border-radius:50%;background:radial-gradient(circle,rgba(229,25,43,.28),transparent 60%);animation:breathe 4s ease-in-out infinite}
 .loader__core{position:relative;z-index:2;display:grid;justify-items:center;gap:1.5rem;transition:opacity .5s var(--ease),transform .8s var(--ease)}
-.loader__ring{position:relative;width:min(52vw,210px);aspect-ratio:1;display:grid;place-items:center}
+.loader__ring{position:relative;width:min(78vw,340px);aspect-ratio:1;display:grid;place-items:center}
+@media (max-height:600px){.loader__ring{width:min(52vw,210px)}}
 .loader__ring svg{position:absolute;inset:-6%;width:112%;height:112%;transform:rotate(-90deg)}
 .lr-track{fill:none;stroke:rgba(255,255,255,.1);stroke-width:1.2}
 .lr-arc{fill:none;stroke:var(--red-2);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:578;stroke-dashoffset:578;filter:drop-shadow(0 0 7px rgba(255,61,77,.9))}
@@ -137,6 +138,8 @@ html.menu-open .hdr{transform:none}
 .brand{display:inline-flex;align-items:center;gap:.8rem;position:relative;z-index:3}
 .brand img{width:44px;height:44px;border-radius:50%;box-shadow:0 0 0 1px rgba(255,255,255,.18),0 8px 26px -6px rgba(229,25,43,.7);transition:transform .8s var(--ease)}
 .brand:hover img{transform:rotate(-12deg) scale(1.06)}
+.hdr .brand img{width:62px;height:62px}
+@media (min-width:980px){.hdr .brand img{width:76px;height:76px}}
 .brand__t{display:grid;font:600 .62rem/1 var(--f-m);letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
 .brand__t b{font:900 1.22rem/1.05 var(--f-d);font-stretch:112%;letter-spacing:.02em;color:#fff;margin-top:.22rem}
 .nav{display:none}
