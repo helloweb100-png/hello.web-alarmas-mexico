@@ -394,6 +394,8 @@ b small{font-size:.42em;letter-spacing:0;margin-left:.18em;font-weight:800;color
 .pc__media--tr{--img:url(img/sistema-tr-negocio.jpg)}
 .pc__media--cctv{--img:url(img/camara-alarma-cctv.jpg)}
 .pc__media--c7{--mbg:#000}.pc__media--kit,.pc__media--vp,.pc__media--vpip,.pc__media--vp5{--mbg:#fff}
+.pc__media--sos{--img:url(img/boton-sos.jpg)}
+.pc__media--sos img{object-fit:cover;object-position:50% 60%}
 .pc__n{position:absolute;right:.8rem;top:.8rem;z-index:2;padding:.38rem .6rem;border-radius:99px;background:rgba(255,255,255,.88);font:600 .66rem/1 var(--f-m);letter-spacing:.08em;color:#0b0b10}
 .pc__deal{position:absolute;left:.8rem;top:.8rem;z-index:2;padding:.42rem .75rem;border-radius:99px;background:linear-gradient(120deg,#c8161b,#ff4a4a);font:700 .6rem/1 var(--f-m);letter-spacing:.12em;text-transform:uppercase;color:#fff;box-shadow:0 10px 24px -8px rgba(229,25,43,.9)}
 .pc__body{display:flex;flex-direction:column;gap:.55rem;flex:1;padding:1.2rem 1.3rem 1.3rem}
@@ -411,6 +413,20 @@ b small{font-size:.42em;letter-spacing:0;margin-left:.18em;font-weight:800;color
 .cat__end .btn--dark{background:var(--red)}
 .cat__end .btn--dark:hover{background:#fff;color:#0b0b10}
 .cat__ui{display:none}
+
+/* 12b · Demostraciones (videos de la alarma vecinal) ------------------------------------ */
+.demo{padding:clamp(5rem,10vw,9rem) 0;background:var(--bg-1);border-block:1px solid var(--line)}
+.demo__grid{display:grid;grid-template-columns:1fr;gap:clamp(1.4rem,3vw,2rem);max-width:34rem;margin-inline:auto}
+.demo__item{margin:0;display:flex;flex-direction:column;gap:.85rem}
+.demo__media{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;background:#000;border:1px solid var(--line-2);box-shadow:0 50px 90px -56px rgba(229,25,43,.55)}
+.demo__media video,.demo__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
+.demo__cap{font:500 .7rem/1.4 var(--f-m);letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.demo__cap b{margin-right:.7rem;font-weight:700;color:var(--red-2)}
+@media (min-width:980px){
+  .demo__grid{grid-template-columns:repeat(6,1fr);max-width:none;margin-inline:0}
+  .demo__item{grid-column:span 2}
+  .demo__item--wide{grid-column:span 3}
+}
 
 /* 13 · Proceso ------------------------------------------------------------------------ */
 .proc{padding:clamp(5rem,10vw,9rem) 0;background:var(--bg)}

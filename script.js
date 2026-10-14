@@ -773,6 +773,12 @@
     });
   }
 
+  /* Demostraciones: solo un video suena a la vez */
+  function initDemos() {
+    const vids = $$('.demo video');
+    vids.forEach((v) => v.addEventListener('play', () => vids.forEach((o) => { if (o !== v) o.pause(); })));
+  }
+
   /* 13 · Arranque ----------------------------------------------------------------------------------------------- */
   initWhatsAppLinks();
   initMenu();
@@ -781,6 +787,7 @@
   initScenarios();
   initAnchors();
   initChrome();
+  initDemos();
 
   if (!FX) {
     // Sin GSAP o con "reducir movimiento": contenido estático, todo visible
